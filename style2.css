@@ -40,12 +40,16 @@ body {
 .card-img-container {
     position: relative;
     overflow: hidden;
+    width: 100%; /* Ensure container takes up full width */
+    height: 400px; /* Set a consistent height for all images */
 }
 
 .game-image {
     transition: opacity 0.5s;
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio without distortion */
 }
 
 .game-description {
@@ -62,20 +66,14 @@ body {
     padding: 10px; /* Add padding for better text readability */
 }
 
-.card-img-container {
-    position: relative;
-    /* other styles like width, height, etc. */
+.card-img-container:hover .game-description {
+    display: block; /* Show the description on hover */
 }
-
-    .card-img-container:hover .game-description {
-        display: block; /* Show the description on hover */
-    }
 
 .description-content {
     max-height: 100%;
     overflow-y: auto; /* Add scroll to the content directly if needed */
 }
-
 
 .card {
     position: relative;
@@ -100,11 +98,6 @@ body {
 .form {
     margin: 0;
 }
-
-/* removed to fix formatting issues 
-.small-jumbotron {
-    height: 70vh;
-}*/
 
 nav {
     text-align: center;
@@ -340,38 +333,22 @@ footer {
     align-items: center;
 }
 
-    .quantity-adjuster input[type="number"] {
-        width: 50px;
-        margin: 0 5px;
-        text-align: center;
-    }
+.quantity-adjuster input[type="number"] {
+    width: 50px;
+    margin: 0 5px;
+    text-align: center;
+}
 
-    .quantity-adjuster button {
-        width: 30px;
-        height: 30px;
-        padding: 0;
-        border: none;
-        background: #eee;
-        line-height: 30px;
-        vertical-align: middle;
-        cursor: pointer;
-    }
-
-
-/*#cartDetails {
-    display: none;
-    position: fixed;
-    top: 40px;
-    right: 10px;
-    background-color: rgb(206, 201, 240);
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 400px;
-    height: auto;
-    overflow: auto;
-    max-height: calc(100vh - 50px);
-    right: 0;
-}*/
+.quantity-adjuster button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: #eee;
+    line-height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+}
 
 .cart-close {
     margin-top: 30px;
