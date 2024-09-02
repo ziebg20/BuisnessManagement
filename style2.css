@@ -29,7 +29,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%; 
-    height: 300px; /* Set a consistent height for all images */
+    height: 600px; /* Set a consistent height for all images */
 }
 
 .game-image,
