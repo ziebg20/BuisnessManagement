@@ -28,15 +28,15 @@ body {
 .card-img-container {
     position: relative;
     overflow: hidden;
-    width: 100%; 
-    height: 600px; /* Set a consistent height for all images */
+    width: 100%;
+    height: 70vh; /* Increased height for larger images */
 }
 
 .game-image,
 .card-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images fill the container while maintaining aspect ratio */
+    object-fit: cover;
     display: block;
 }
 
@@ -51,16 +51,17 @@ body {
     overflow: auto;
     display: none;
     align-items: center;
-    padding: 10px; /* Add padding for better text readability */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .card-img-container:hover .game-description {
-    display: block; /* Show the description on hover */
+    display: block;
 }
 
 .description-content {
     max-height: 100%;
-    overflow-y: auto; /* Add scroll to the content directly if needed */
+    overflow-y: auto;
 }
 
 .card {
@@ -69,7 +70,7 @@ body {
 }
 
 .carousel-height {
-    height: 500px;
+    height: 70vh; /* Increased height for carousel items */
 }
 
 .carousel-item {
@@ -79,8 +80,8 @@ body {
 .carousel-item img,
 .carousel-item iframe {
     height: 100%;
-    width: 100%; 
-    object-fit: cover; /* This ensures the content covers the area without distorting aspect ratio */
+    width: 100%;
+    object-fit: cover;
 }
 
 .form {
@@ -125,11 +126,8 @@ tr {
 th, td {
     border: 2px solid black;
     border-radius: 10px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 2px;
+    padding: 10px; /* Increased padding for better readability */
     text-align: center;
-    justify-content: center;
 }
 
 th {
@@ -161,7 +159,7 @@ footer {
     border-collapse: collapse;
     table-layout: fixed;
     width: 80vw;
-    height: 40vh;
+    height: 50vh; /* Increased height for the table */
     margin: auto;
 }
 
@@ -174,7 +172,7 @@ footer {
 #goh img,
 .card-img-container img {
     width: 100%;
-    height: 300px; /* Ensure consistent image height */
+    height: 400px; /* Increased height for images */
     object-fit: cover;
     display: block;
 }
@@ -215,8 +213,8 @@ footer {
 
 .favourites {
     display: block;
-    width: 100%; 
-    height: 80vh; 
+    width: 100%;
+    height: 80vh;
     object-fit: fill;
 }
 
@@ -258,11 +256,11 @@ footer {
     transition: 0.5s;
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     padding: 0;
-    z-index: 1001; /* Ensure it's above other content */
+    z-index: 1001;
 }
 
 #cartDetails.open {
-    width: 400px; /* Or whatever width you prefer */
+    width: 400px;
     padding: 20px;
 }
 
@@ -295,7 +293,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 8px
+    padding-left: 8px;
 }
 
 .quantity-adjuster {
@@ -359,9 +357,9 @@ footer {
 }
 
 #searchInput {
-    font-size: 20px; 
-    padding: 5px 20px; 
-    width: 50%; 
+    font-size: 20px;
+    padding: 5px 20px;
+    width: 50%;
 }
 
 .suggestions-dropdown {
@@ -374,7 +372,7 @@ footer {
     border: 1px solid black;
     width: 50%;
     z-index: 1000;
-    top: 120%; 
+    top: 120%;
 }
 
 .suggestions-dropdown ul {
@@ -407,8 +405,3 @@ footer {
     background-color: #fff;
     border: 1px solid #ccc;
     z-index: 1000;
-}
-
-html {
-    scroll-behavior: smooth;
-}
